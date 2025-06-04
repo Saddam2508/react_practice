@@ -1,11 +1,16 @@
+import React from "react";
 import "./App.css";
-import Browse from "./routes";
+
+import Users from "./components/Users";
+import NewUser from "./components/NewUser";
+import UsersProvider from "./context/UsersContext";
 
 function App() {
   return (
-    <div className="App">
-      <Browse />
-    </div>
+    <UsersProvider>
+      <NewUser />
+      <Users />
+    </UsersProvider>
   );
 }
 
